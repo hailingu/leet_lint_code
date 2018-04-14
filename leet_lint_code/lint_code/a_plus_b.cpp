@@ -2,6 +2,7 @@
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of lint code problem 1.
+
 #ifndef LEETLINTCODE_LINTCODE_APLUSB_CPP
 #define LEETLINTCODE_LINTCODE_APLUSB_CPP
 
