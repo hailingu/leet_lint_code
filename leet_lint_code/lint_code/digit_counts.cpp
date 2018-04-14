@@ -10,41 +10,43 @@
 #include <math.h>
 
 class DigitCounts{
- public:
-   int digitCounts(int k, int n) {
-     int current_digit = 0;
-     int last_digit = -1;
-     int base = 1;
-     int total = 0;
-     int i = 0;
+public:
+  int digitCounts(int k, int n) {
+    if (n == 0 && k == 0) return 1;
 
-     if (n == 0 && k == 0) return 1;
+    int base = 1;
+    int total = 0;
+    int i = 1;
+    int q = 10;
 
-     while (n > 0) {
-       current_digit = n % 10;
+    int current_digit = n % 10;
+    int last_digit = current_digit;
 
-        if (last_digit == -1) {
-            last_digit = current_digit;
-            if (last_digit >= k) total = 1;
-        } else {
-            if (k != 0) {
-                 base = i * pow(10, i - 1);
-                 if (current_digit > k) total = total + current_digit * base + pow(10, i);
-                 else if (current_digit == k) total = total + current_digit * base + last_digit  + 1;
-                 else total = total + current_digit * base;
-            } else  {
-             total = current_digit * base + total;
-             base = base * 10 + 1;
-            }
-        }
+    if (last_digit >= k) total = 1;
 
-        if (i > 0) last_digit = current_digit * pow(10, i) + last_digit;
-        i = i + 1;
-        n = n / 10;
-     }
+    n = n / 10;
 
-     return total;
-   }
+    while (n > 0) {
+      current_digit = n % 10;
+
+      if (k != 0) {
+        base = i * q / 10;
+        total += current_digit * base;
+        if (current_digit > k)  total += q;
+        else if (current_digit == k) total += (last_digit  + 1);
+      } else {
+        total += current_digit * base;
+        base = base * 10 + 1;
+      }
+
+      if (i > 0) last_digit = current_digit * q + last_digit;
+      i = i + 1;
+      n = n / 10;
+      q = q * 10;
+    }
+
+    return total;
+    }
 };
 
 #endif // LEETLINTCODE_LINTCODE_DIGITCOUNTS_CPP
