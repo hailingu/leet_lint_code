@@ -13,11 +13,13 @@ class TrailingZeros {
    long long trailingZeros(long long n) {
      long long total = 0;
      long long count = 0;
+
      while (n > 0) {
        count = n / 5;
        total += count;
        n = count;
      }
+
      return total;
    }
 
@@ -26,12 +28,14 @@ class TrailingZeros {
      double t = (double)n;
      long long base = 2;
      long long tmp = 0;
+
      do {
        t = t / 10.0;
        tmp = (long long) (t*base);
        total = total + tmp;
        base = base * 2;
      } while(tmp > 1);
+
      return total;
    }
 };

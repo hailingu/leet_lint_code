@@ -13,11 +13,13 @@ class APlusB {
      int t = a;
      a = a ^ b;
      b = t & b;
+
      while (b != 0) {
        t = a;
        a = (b << 1) ^ a;
        b = (b << 1) & t;
      }
+
     return a;
   }
 };
