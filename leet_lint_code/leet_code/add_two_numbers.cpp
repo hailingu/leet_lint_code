@@ -13,7 +13,6 @@ class Solution {
     struct ListNode* l2_iter = l2;
     struct ListNode* tail = NULL;
 
-
     if (!l1_iter) return l2_iter;
     if (!l2_iter) return l1_iter;
 
