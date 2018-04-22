@@ -14,7 +14,7 @@ class TrailingZeros {
      long long total = 0;
      long long count = 0;
 
-     while (n > 0) {
+     while (0 < n) {
        count = n / 5;
        total += count;
        n = count;
@@ -34,7 +34,7 @@ class TrailingZeros {
        tmp = (long long) (t*base);
        total = total + tmp;
        base = base * 2;
-     } while(tmp > 1);
+     } while(1 < tmp);
 
      return total;
    }

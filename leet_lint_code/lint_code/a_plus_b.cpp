@@ -15,7 +15,7 @@ class APlusB {
      a = a ^ b;
      b = t & b;
 
-     while (b != 0) {
+     while (0 != b) {
        t = a;
        a = (b << 1) ^ a;
        b = (b << 1) & t;

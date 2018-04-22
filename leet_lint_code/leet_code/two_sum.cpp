@@ -15,8 +15,9 @@ class TwoSum {
    std::vector<int> twoSum(std::vector<int>& nums, int target) {
      std::vector<int> result;
      std::map<int, int> hashmap;
-       
-     for (int i = 0; i < nums.size(); ++ i) {
+
+     size_t len = nums.size();
+     for (int i = 0; i < len; ++ i) {
        if (hashmap.find(nums[i]) != hashmap.end()){
          int k = hashmap[nums[i]];
          result.push_back(i);
