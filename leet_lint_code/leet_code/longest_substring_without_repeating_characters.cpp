@@ -16,7 +16,8 @@ class LongestSubstringWithoutRepeatingCharacters {
      memset(hash_map, -1, 258 * sizeof(int));
 
      while (i < len) {
-       if (-1 == hash_map[s[i]] || (-1 != hash_map[s[i]] && origin > hash_map[s[i]])) hash_map[s[i]] = i;
+       if (-1 == hash_map[s[i]] || (-1 != hash_map[s[i]] && origin > hash_map[s[i]]))
+         hash_map[s[i]] = i;
        else{
          tmp_len = i - origin;
          max_len = max_len > tmp_len ? max_len : tmp_len;

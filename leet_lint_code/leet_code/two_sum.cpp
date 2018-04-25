@@ -24,8 +24,8 @@ class TwoSum {
          if (k < i) result.insert(result.begin(), k);
          else result.push_back(k);
        } else hashmap[target - nums[i]] = i;
-     }
-    return result;
+      }
+      return result;
     }
 };
 
