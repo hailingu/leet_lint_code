@@ -57,7 +57,6 @@ class LongestPalindromicSubstring {
       for (int j = index - length + 1; j < index + length; ++ j)
         if (s_cpy[j] != '#') ret.append(s_cpy.substr(j, 1));
 
-
       return ret;
     }
 };
