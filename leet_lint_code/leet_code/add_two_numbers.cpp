@@ -6,7 +6,7 @@
 #ifndef LEETLINTCODE_LINTCODE_ADDTWONUMBERS_CPP
 #define LEETLINTCODE_LINTCODE_ADDTWONUMBERS_CPP
 
-class Solution {
+class AddTwoNumbers {
 public:
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
    struct ListNode* l1_iter = l1;
