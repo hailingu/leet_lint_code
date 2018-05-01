@@ -6,7 +6,7 @@
 #ifndef LEETLINTCODE_LINTCODE_MERGETWOSORTEDARRAYS_CPP
 #define LEETLINTCODE_LINTCODE_MERGETWOSORTEDARRAYS_CPP
 
-#include<vector>
+#include <vector>
 
 class MergeTwoSortedArrays {
  public:
