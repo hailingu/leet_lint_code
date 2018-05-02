@@ -16,7 +16,7 @@ class StringToInteger {
      int MIN = MAX + 1;
      int len = (int)str.length();
      int ret = 0, sign = 1, index = 0;
-     if (0 == len ) return  ret;
+     if (0 == len ) return ret;
      bool begin = false;
      while (index < len) {
        if (str[index] != ' ' &&
@@ -27,7 +27,7 @@ class StringToInteger {
       if (!begin) {
         if (' ' == str[index ++ ]) continue;
         if ('+' == str[index] || '-' == str[index]) {
-          beginning = true;
+          begin = true;
           if ('-' == str[index ++ ]) sign = -1;
           continue;
         }
