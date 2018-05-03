@@ -6,12 +6,14 @@
 #ifndef LEETLINTCODE_LINTCODE_PERMUTATIONS_CPP
 #define LEETLINTCODE_LINTCODE_PERMUTATIONS_CPP
 
+#include<vector>
+
 class Permutations {
  public:
-   vector<vector<int> > permute(vector<int> &num) {
-     vector<vector<int> > ret;
+  std::vector<std::vector<int> > permute(std::vector<int> &num) {
+     std::vector<std::vector<int> > ret;
      if (0 == num.size()) {
-       vector<int> t;
+       std::vector<int> t;
        ret.push_back(t);
        return ret;
      }
@@ -19,9 +21,9 @@ class Permutations {
      return ret;
    }
 
-  void permute_help(vector<vector<int> >& ret, vector<int> &num,  int index){
+  void permute_help(std::vector<std::vector<int> >& ret, std::vector<int> &num,  int index){
     if (0 == index) {
-      vector<int> seed;
+      std::vector<int> seed;
       seed.push_back(num[index]);
       ret.push_back(seed);
       return ;
@@ -32,7 +34,7 @@ class Permutations {
     int size = (int)ret.size();
     for (int i = 0; i < size; ++ i) {
       for(int q = 0; q < ret[i].size() + 1; ++ q){
-        vector<int> temp = ret[i];
+        std::vector<int> temp = ret[i];
         temp.insert(temp.begin() + q, num[index]);
         ret.push_back(temp);
       }
