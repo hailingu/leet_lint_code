@@ -32,7 +32,7 @@ class LongestPalindromicSubstring {
        if (i < right_border)
          p[i] = p[2 * center - i] < right_border - i ?
          p[2 * center - i] : right_border - i;
-         else p[i] = 1;
+       else p[i] = 1;
 
        while (s_cpy[i - p[i]] == s_cpy[i + p[i]]) ++ p[i];
          if (right_border < i + p[i]) {
