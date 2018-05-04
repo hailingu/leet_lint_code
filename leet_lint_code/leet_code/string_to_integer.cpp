@@ -25,7 +25,10 @@ class StringToInteger {
            !(str[index] >= '0' && str[index] <= '9'))  break;
 
       if (!begin) {
-        if (' ' == str[index ++ ]) continue;
+        if (' ' == str[index]) {
+          ++ index;
+          continue;
+        }
         if ('+' == str[index] || '-' == str[index]) {
           begin = true;
           if ('-' == str[index ++ ]) sign = -1;

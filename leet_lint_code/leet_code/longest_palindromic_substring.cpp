@@ -27,9 +27,7 @@ class LongestPalindromicSubstring {
 
      for (int i = 0; i < s_cpy.length(); ++ i) p.push_back(0);
 
-     int i = 1;
-     int center = 0;
-     int right_border = 0;
+     int i = 1, center = 0, right_border = 0;
      while (i < s_cpy.length()) {
        if (i < right_border)
          p[i] = p[2 * center - i] < right_border - i ?
@@ -44,8 +42,7 @@ class LongestPalindromicSubstring {
         ++ i;
       }
 
-      int index = 0;
-      int length = 0;
+      int index = 0, length = 0;
       for (int i = 0; i < p.size(); ++ i) {
         if (p[i] > length) {
           index = i;

@@ -11,17 +11,17 @@
 
 class ZigZagConversion {
  public:
-   std::string convert(std::string s, int nRows) {
+   std::string convert(std::string s, int numRows) {
      std::string ret = "";
      int level = 0, internal = 0, inner_loop = 0;
      size_t len = s.size();
-     if (1 == nRows) internal = 1;
-     else internal = (nRows - 1) << 1;
+     if (1 == numRows) internal = 1;
+     else internal = (numRows - 1) << 1;
 
-     while (level < nRows) {
+     while (level < numRows) {
        inner_loop = level;
        if (level < len) ret += s[level];
-       if ((level % nRows) == 0 || (level % nRows) == (nRows - 1)) {
+       if ((level % numRows) == 0 || (level % numRows) == (numRows - 1)) {
          while (inner_loop + internal < len) {
            ret = ret + s[inner_loop + internal];
            inner_loop = inner_loop + internal;
@@ -40,9 +40,9 @@ class ZigZagConversion {
     }
 
     // O(n)
-    std::string convert2(std::string s, int nRows) {
-      int divisor = (nRows - 1) << 1, current_index = 0;
-      if (divisor == 0) return s;
+    std::string convert2(std::string s, int numRows) {
+      int divisor = (numRows - 1) << 1, current_index = 0;
+      if (0 == divisor) return s;
       std::string ret = "";
       size_t len = s.size();
       int index1 = 0, index2 = 0, remainder1 = 0, remainder2 = 0;
