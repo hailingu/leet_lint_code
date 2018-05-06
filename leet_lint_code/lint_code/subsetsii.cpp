@@ -12,9 +12,9 @@
 
 class SubsetsII {
  public:
-   std::vector<std::vector<int> > subsets(std::vector<int> &nums) {
+   std::vector<std::vector<int> > subsetsWithDup(std::vector<int> &nums) {
      std::vector<vector<int> > ret;
-     sort(nums.begin(), nums.end());
+     std::sort(nums.begin(), nums.end());
      if (0 == nums.size()) {
       std::vector<int> v;
       ret.push_back(v);
@@ -22,12 +22,12 @@ class SubsetsII {
     return ret;
    }
 
-   pair<int, int> subsetsHelp(std::vector<int>& s, std::vector<std::vector<int> >& save){
+   std::pair<int, int> subsetsHelp(std::vector<int>& s, std::vector<std::vector<int> >& save){
      int p;
      if (s.size() > 1){
          p = s[s.size()-1];
          s.pop_back();
-         pair<int,int> next = subsetsHelp(s, save);
+         std::pair<int,int> next = subsetsHelp(s, save);
          int t_size = (int)save.size();
          if (p == next.first) {
              for (int i = next.second; i < t_size; i ++) {
@@ -44,13 +44,13 @@ class SubsetsII {
              save.push_back(temp);
          }
 
-         return make_pair(p, t_size);
+         return std::make_pair(p, t_size);
      }
 
      p = s[0];
-     vector<int> temp;
-     vector<int> empty;
-     temp->push_back(p);
+     std::vector<int> temp;
+     std::vector<int> empty;
+     temp.push_back(p);
      save.push_back(empty);
      save.push_back(temp);
      return make_pair(p, save.size()-1);
