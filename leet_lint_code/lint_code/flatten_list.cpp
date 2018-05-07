@@ -32,7 +32,21 @@
 class FlattenList {
  public:
    std::vector<int> flatten(std::vector<NestedInteger> &nestedList) {
+     std::vector<int> ret;
+     for (size_t i = 0; i < nestedList.size(); ++ i)
+       flattenHelp(ret, nestedList[i]);
+     return ret;
+   }
 
+   void flattenHelp(std::vector<int> &v, NestedInteger &ni) {
+     if (ni.isInteger()) {
+       v.push_back(ni.getInteger());
+       return ;
+     }
+
+     std::vector<NestedInteger> tmp = ni.getList();
+     for (size_t i = 0; i < tmp.size(); ++ i)
+       flattenHelp(v, tmp[i]);
    }
 };
 
