@@ -27,7 +27,7 @@ class KthLargestElement {
      }
 
      if (nums[i] > nums[end]) swap(nums[i], nums[end]);
-     quick_sort(begin, i - 1, nums);
+     quick_sort(begin, i, nums);
      quick_sort(i + 1, end, nums);
   }
 
