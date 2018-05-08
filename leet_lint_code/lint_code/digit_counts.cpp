@@ -12,7 +12,7 @@
 class DigitCounts{
 public:
   int digitCounts(int k, int n) {
-    if (n == 0 && k == 0) return 1;
+    if (0 == n && 0 == k) return 1;
 
     int base = 1;
     int total = 0;

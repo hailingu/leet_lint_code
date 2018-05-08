@@ -23,7 +23,7 @@ class RotateString {
   void rotateOne(std::string& str, int len) {
     char ch = str[len - 1];
     int j = len - 1;
-    while (j > 0) {
+    while (0 < j) {
       str[j] = str[j-1];
       -- j;
     }

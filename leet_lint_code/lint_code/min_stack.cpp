@@ -18,7 +18,7 @@ public:
  MinStack() {
    unsigned int zero = 0;
    this->MAX = (~zero) >> 1;
-     this->min_value = MAX;
+   this->min_value = MAX;
  }
 
  void push(int number) {

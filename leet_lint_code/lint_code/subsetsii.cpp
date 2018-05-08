@@ -24,13 +24,13 @@ class SubsetsII {
 
    std::pair<int, int> subsetsHelp(std::vector<int>& s, std::vector<std::vector<int> >& save){
      int p;
-     if (s.size() > 1){
-         p = s[s.size()-1];
+     if (1 < s.size()){
+         p = s[s.size() - 1];
          s.pop_back();
          std::pair<int,int> next = subsetsHelp(s, save);
          int t_size = (int)save.size();
          if (p == next.first) {
-             for (int i = next.second; i < t_size; i ++) {
+             for (int i = next.second; i < t_size; ++ i) {
                  std::vector<int> temp = save[i];
                  temp.push_back(p);
                  save.push_back(temp);
@@ -38,7 +38,7 @@ class SubsetsII {
              return make_pair(p, t_size);
          }
 
-         for (int i = 0; i < t_size; i ++) {
+         for (int i = 0; i < t_size; ++ i) {
              std::vector<int> temp = save[i];
              temp.push_back(p);
              save.push_back(temp);
@@ -53,7 +53,7 @@ class SubsetsII {
      temp.push_back(p);
      save.push_back(empty);
      save.push_back(temp);
-     return make_pair(p, save.size()-1);
+     return make_pair(p, save.size() - 1);
   }
 };
 

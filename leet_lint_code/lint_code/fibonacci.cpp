@@ -11,8 +11,8 @@
 class Fibonacci {
  public:
    int fibonacci(int n) {
-     if (n == 1) return 0;
-     if (n == 2) return 1;
+     if (1 == n) return 0;
+     if (2 == n) return 1;
      std::vector<int> v;
      v.push_back(0);
      v.push_back(1);

@@ -11,7 +11,7 @@
 class SearchA2DMatrix {
  public:
    bool searchMatrix(std::vector<std::vector<int> > &matrix, int target) {
-     if (matrix.size() == 0) return false;
+     if (0 == matrix.size()) return false;
      int index = binary_search(matrix, target, 0, (int)matrix.size() - 1);
      std::vector<int> inner = matrix[index];
      return binary_search(inner, target, 0, (int)inner.size() - 1);

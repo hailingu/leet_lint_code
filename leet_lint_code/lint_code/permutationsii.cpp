@@ -37,14 +37,14 @@ class PermutationsII {
      if (1 >= len) return t;
 
      int j = len - 1;
-     while (j > 0 && nums[j] <= nums[j - 1]) -- j;
+     while (0 < j && nums[j] <= nums[j - 1]) -- j;
 
-     if (j == 0) return t;
+     if (0 == j) return t;
 
      int pivot = nums[j - 1];
      int i = len - 1;
 
-     while (i > 0 && nums[i] <= pivot) -- i;
+     while (0 < i && nums[i] <= pivot) -- i;
      swap(nums[i], nums[j - 1]);
      std::vector<int>::iterator begin = nums.begin() + j;
      std::reverse(begin, nums.end());

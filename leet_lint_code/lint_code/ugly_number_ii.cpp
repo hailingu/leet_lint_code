@@ -29,7 +29,7 @@ class UglyNumberII{
       if (min_number == multiply_five) multiply_five = 5 * v[++ five];
     }
 
-    return v[n-1];
+    return v[n - 1];
    }
 
    int minNumber(int a, int b, int c) {

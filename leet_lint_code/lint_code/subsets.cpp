@@ -24,7 +24,7 @@ class Subsets {
 
    void subsetsHelp(std::vector<int>& s, std::vector<std::vector<int> >& save){
     int p;
-    if (s.size() > 1){
+    if (1 < s.size()){
         p = s[s.size() - 1];
         s.pop_back();
         subsetsHelp(s, save);
