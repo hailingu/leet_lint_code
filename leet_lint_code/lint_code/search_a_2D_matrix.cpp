@@ -17,7 +17,7 @@ class SearchA2DMatrix {
      return binary_search(inner, target, 0, (int)inner.size() - 1);
    }
 
-   int binary_search(std::vector<std::vector<int> >& matrix, int target, int begin, int end){
+   bool binary_search(std::vector<std::vector<int> >& matrix, int target, int begin, int end){
      int length = end + begin;
      vector<int> center_v = matrix[length / 2];
      int center = center_v[0];
@@ -27,7 +27,7 @@ class SearchA2DMatrix {
      else return binary_search(matrix, target, begin, length / 2 - 1);
    }
 
-   int binary_search(std::vector<int> matrix, int target, int begin, int end){
+   bool binary_search(std::vector<int> matrix, int target, int begin, int end){
      if (target > matrix[end]) return false;
      if (target < matrix[begin]) return false;
      int length = begin + end;
