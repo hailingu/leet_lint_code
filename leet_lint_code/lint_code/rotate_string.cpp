@@ -24,7 +24,7 @@ class RotateString {
     char ch = str[len - 1];
     int j = len - 1;
     while (0 < j) {
-      str[j] = str[j-1];
+      str[j] = str[j - 1];
       -- j;
     }
     str[0] = ch;
