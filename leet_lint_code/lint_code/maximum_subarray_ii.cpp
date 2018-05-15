@@ -21,16 +21,17 @@ class MaximumSubarrayII {
     std::vector<int> max_cnt(len, MIN);
 
     int i = 0, tmp = 0, right = 0, left = MIN, temp_left = 0;
-    while (i != len - 1) {
+    int last = len - 1;
+    while (i != last) {
       update(temp_left, nums[i], left);
-      tmp = left + maxSubArrayRight(nums, len - 1, i + 1, max_cnt, MIN);
+      tmp = left + maxSubArrayRight(nums, last, i + 1, max_cnt, MIN);
       if (tmp > max) max = tmp;
       ++ i;
     }
     return max;
   }
 
-  inline int maxSubArrayRight(std::vector<int> &nums, int begin, int end,
+  inline int maxSubArrayRight(std::vector<int> &nums, int &begin, int end,
     std::vector<int> &max_cnt, int &min) {
       if (max_cnt[end] != min) return max_cnt[end];
       int max = min, temp_right = 0, i = begin;

@@ -11,12 +11,11 @@
 class MaximumSubarray {
  public:
   int maxSubArray(std::vector<int> &nums) {
-    int max = nums[0], temp_left = 0, len = (int)nums.size(), i = 0, tmp = 0;
+    int max = nums[0], temp_left = 0, len = (int)nums.size(), i = 0;
     while (i != len) {
-      temp_left += nums[i];
+      temp_left += nums[i ++];
       if (temp_left > max) max = temp_left;
       if (temp_left < 0) temp_left = 0;
-      ++ i;
     }
     return max;
   }
