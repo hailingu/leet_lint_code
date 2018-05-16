@@ -11,17 +11,12 @@
 class APlusB {
  public:
    int aplusb(int a, int b) {
-     int t = a;
-     a = a ^ b;
-     b = t & b;
-
-     while (0 != b) {
-       t = a;
-       a = (b << 1) ^ a;
-       b = (b << 1) & t;
+     while (b != 0) {
+         int t = a;
+         a = b ^ a;
+         b = (b & t) << 1;
      }
-
-    return a;
+     return a;
   }
 };
 
