@@ -6,10 +6,11 @@
 #ifndef LEETLINTCODE_LINTCODE_MINIMUSSUBARRAY_CPP
 #define LEETLINTCODE_LINTCODE_MINIMUSSUBARRAY_CPP
 
+#include <vector>
 
 class Minimum Subarray {
  public:
-    int minSubArray(vector<int> &nums) {
+    int minSubArray(std::vector<int> &nums) {
       int min = nums[0], temp_left = 0, len = (int)nums.size(), i = 0;
       while (i != len) {
         temp_left += nums[i ++];
