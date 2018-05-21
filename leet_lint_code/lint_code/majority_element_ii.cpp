@@ -26,13 +26,13 @@ class MajorityElementII {
   int majorityNumber(std::vector<int> &nums) {
     int len = (int)nums.size();
     if (2 >= len) return -1;
-    
+
     std::vector<SD> v;
-    
+
     int i = 1;
     v.push_back(SD(nums[0]));
     int sub_cnt = 0;
-    
+
     while (i < len) {
       SD* tmp = find(v, nums[i]);
       if (NULL != tmp) {
@@ -45,31 +45,29 @@ class MajorityElementII {
           -- v[j].cnt;
           if (v[j].cnt == 0) {
             v[j] = SD(nums[i]);
-            
             for (size_t k = 0; k < j;  ++ k) {
               v[k].cnt += sub_cnt;
             }
             sub_cnt = 0;
-            break;
           }
         }
       }
       ++ i;
     }
-    
+
     int majority = v[0].value;
     int tmp = v[0].cnt;
-    for (int i = 1; i < v.size(); ++ i) {
+    for (int i = 1; i < 3; ++ i) {
       if (tmp < v[i].cnt) {
         tmp = v[i].cnt;
         majority = v[i].value;
       }
     }
-    
+
     return majority;
   }
 
-  SD* find( std::vector<SD> &v, int &value) {
+  SD* find( std::vector<SD> &v, int value) {
     int len = (int)v.size();
     for (int i = 0; i < len; ++ i) {
       if (value == v[i].value) return &v[i];

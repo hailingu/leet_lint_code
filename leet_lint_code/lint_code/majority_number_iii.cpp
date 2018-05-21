@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License(GPL)
 // Author: Hailin Gu
-// This is a answer of lint code problem 47.
+// This is a answer of lint code problem 48.
 
 #ifndef LEETLINTCODE_LINTCODE_MAJORITYELEMENTIII_CPP
 #define LEETLINTCODE_LINTCODE_MAJORITYELEMENTIII_CPP
@@ -77,4 +77,4 @@ class Solution {
   }
 };
 
-#endif // LEETLINTCODE_LINTCODE_MAJORITYELEMENTII_CPP
+#endif // LEETLINTCODE_LINTCODE_MAJORITYELEMENTIII_CPP
