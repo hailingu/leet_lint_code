@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License(GPL)
 // Author: Hailin Gu
-// This is a answer of leet code problem 8.
+// This is a answer of leet code problem 54.
 
 #ifndef LEETLINTCODE_LINTCODE_STRINGTOINTEGER_CPP
 #define LEETLINTCODE_LINTCODE_STRINGTOINTEGER_CPP
