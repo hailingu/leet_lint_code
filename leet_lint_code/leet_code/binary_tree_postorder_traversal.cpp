@@ -20,20 +20,20 @@ public:
 };
 
 class BinaryTreePostTraversal {
-public:
-  std::vector<int> postorderTraversal(TreeNode* root) {
-      std::vector<int> v;
-      postorderTraversalHelp(root, v);
-      return v;
-  }
+ public:
+   std::vector<int> postorderTraversal(TreeNode* root) {
+     std::vector<int> v;
+     postorderTraversalHelp(root, v);
+     return v;
+   }
 
-  void postorderTraversalHelp(TreeNode* root, std::vector<int> &v) {
-    if (NULL != root) {
-      postorderTraversalHelp(root->left, v);
-      postorderTraversalHelp(root->right, v);
-      v.push_back(root->val);
-    } else return;
-  }
+   void postorderTraversalHelp(TreeNode* root, std::vector<int> &v) {
+     if (NULL != root) {
+       postorderTraversalHelp(root->left, v);
+       postorderTraversalHelp(root->right, v);
+       v.push_back(root->val);
+     } else return;
+   }
 };
 
 #endif // LEETLINTCODE_LINTCODE_BINARYTREEPOSTTRAVERSAL_CPP

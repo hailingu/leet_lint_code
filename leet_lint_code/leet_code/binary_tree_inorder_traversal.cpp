@@ -22,9 +22,9 @@ class TreeNode {
 class BinaryTreeInorderTraversal {
  public:
    std::vector<int> inorderTraversal(TreeNode* root) {
-       std::vector<int> v;
-       inorderTraversalHelp(root, v);
-       return v;
+     std::vector<int> v;
+     inorderTraversalHelp(root, v);
+     return v;
    }
 
    void inorderTraversalHelp(TreeNode* root, std::vector<int> &v) {

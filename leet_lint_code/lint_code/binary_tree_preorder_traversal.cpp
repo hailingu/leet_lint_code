@@ -21,18 +21,18 @@ class TreeNode {
 
 class BinaryTreePreorderTraversal {
  public:
-  std::vector<int> preorderTraversal(TreeNode* root) {
-      std::vector<int> v;
-      preorderTraversalHelp(root, v);
-      return v;
-  }
+   std::vector<int> preorderTraversal(TreeNode* root) {
+     std::vector<int> v;
+     preorderTraversalHelp(root, v);
+     return v;
+   }
 
-  void preorderTraversalHelp(TreeNode* root, std::vector<int> &v) {
-    if (NULL != root) v.push_back(root->val);
-    else return;
-    preorderTraversalHelp(root->left, v);
-    preorderTraversalHelp(root->right, v);
-  }
+   void preorderTraversalHelp(TreeNode* root, std::vector<int> &v) {
+     if (NULL != root) v.push_back(root->val);
+     else return;
+     preorderTraversalHelp(root->left, v);
+     preorderTraversalHelp(root->right, v);
+   }
 };
 
 #endif // LEETLINTCODE_LINTCODE_BINARYTREEPREORDERTRAVERSAL_CPP
