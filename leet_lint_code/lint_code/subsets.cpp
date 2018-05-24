@@ -38,11 +38,8 @@ class Subsets {
     }
 
     p = s[0];
-    std::vector<int> temp;
-    std::vector<int> empty;
-    temp.push_back(p);
-    save.push_back(empty);
-    save.push_back(temp);
+    save.push_back({});
+    save.push_back({p});
   }
 };
 

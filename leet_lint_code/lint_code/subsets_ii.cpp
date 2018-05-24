@@ -16,8 +16,7 @@ class SubsetsII {
      std::vector<vector<int> > ret;
      std::sort(nums.begin(), nums.end());
      if (0 == nums.size()) {
-      std::vector<int> v;
-      ret.push_back(v);
+      ret.push_back({});
     } else subsetsHelp(nums, ret);
     return ret;
    }
@@ -48,11 +47,9 @@ class SubsetsII {
      }
 
      p = s[0];
-     std::vector<int> temp;
-     std::vector<int> empty;
-     temp.push_back(p);
-     save.push_back(empty);
-     save.push_back(temp);
+
+     save.push_back({});
+     save.push_back({p});
      return make_pair(p, save.size() - 1);
   }
 };
