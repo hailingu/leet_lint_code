@@ -10,11 +10,11 @@
 
 class SearchInsertPosition {
  public:
-   int searchInsert(vector<int>& nums, int target) {
-    return binary_search(nums, target, 0, nums.size() - 1);
+   int searchInsert(std::vector<int>& nums, int target) {
+    return binarySearch(nums, target, 0, nums.size() - 1);
   }
 
-  int binary_search(std::vector<int> &matrix, int target, int begin, int end){
+  int binarySearch(std::vector<int> &matrix, int target, int begin, int end){
     int length = end + begin;
     int center = matrix[length / 2];
 
