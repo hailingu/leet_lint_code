@@ -1,40 +1,47 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License(GPL)
 // Author: Hailin Gu
-// This is a answer of leet code problem 15.
+// This is a answer of lint code problem 59.
 
 #ifndef LEETLINTCODE_LINTCODE_THREESUM_CPP
 #define LEETLINTCODE_LINTCODE_THREESUM_CPP
 
 #include <vector>
 #include <algorithm>
+#include <math.h>
 
-class ThreeSum {
+class ThreeSumCloset {
  public:
-   std::vector<std::vector<int> > threeSum(std::vector<int> num) {
-     std::vector<std::vector<int> > ret;
+   int threeSumClosest(std::vector<int> &num, int target) {
+     unsigned int zero = 0;
+     int MAX = (~zero) >> 1;
      std::sort(num.begin(),num.end());
      int len = (int)num.size(), j, k;
+     int closet = MAX;
+     int distance = abs(MAX - target);
      for(int i = 0; i < len - 2; ++ i){
-       if (num[i] > 0) break;
        j = i + 1, k = len - 1;
        while (j < k) {
          int sum = num[i] + num[j] + num[k];
-         if(sum > 0){
+         int tmp_distance = abs(sum - target);
+         if (tmp_distance < distance) {
+           distance = tmp_distance;
+           closet = sum;
+         }
+
+         if(sum > target){
            while (num[k] == num[k - 1]) { -- k; }
            -- k;
-         }else if(sum < 0){
+         }else if(sum < target){
            while (num[j] == num[j + 1]) { ++ j;}
            ++ j;
          }else{
-           ret.push_back({num[i], num[j], num[k]});
-           while (num[j] == num[j + 1]) {++j;}
-           ++ j;
+           return sum;
          }
        }
        while (num[i] == num[i + 1]) ++i;
      }
-     return ret;
+     return closet;
    }
 };
 

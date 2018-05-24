@@ -17,8 +17,9 @@ class ThreeSum {
      std::vector<std::vector<int> > ret;
      std::sort(num.begin(),num.end());
      int len = (int)num.size(), j, k;
-     for(int i=0; i < len;){
-       j = i + 1, k= len - 1;
+     for(int i = 0; i < len - 2; ++ i){
+       if (num[i] > 0) break;
+       j = i + 1, k = len - 1;
        while (j < k) {
          int sum = num[i] + num[j] + num[k];
          if(sum > 0){
@@ -34,7 +35,6 @@ class ThreeSum {
          }
        }
        while (num[i] == num[i + 1]) ++i;
-       ++ i;
      }
      return ret;
    }
