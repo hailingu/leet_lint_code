@@ -25,11 +25,11 @@ class ThreeSum {
            while (num[k] == num[k - 1]) { -- k; }
            -- k;
          }else if(sum < 0){
-           while (num[j] == num[j + 1]){ ++ j;}
+           while (num[j] == num[j + 1]) { ++ j;}
            ++ j;
          }else{
            ret.push_back({num[i], num[j], num[k]});
-           while(num[j] == num[j+1]){ ++j; }
+           while (num[j] == num[j + 1]) {++j;}
            ++ j;
          }
        }
