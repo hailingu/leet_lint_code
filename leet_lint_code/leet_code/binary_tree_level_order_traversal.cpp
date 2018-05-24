@@ -31,16 +31,12 @@ class BinaryTreeLevelOrderTraversal {
    void levelOrderHelp(TreeNode* root, std::vector<std::vector<int>> &v, int level) {
      if (NULL == root) return ;
      int len = (int) v.size();
-     if (len - 1 < level) {
-       std::vector<int> tmp;
-       v.push_back(tmp);
-     }
+     if (len - 1 < level) v.push_back(std::vector<int>());
 
      v[level].push_back(root->val);
      levelOrderHelp(root->left, v, level + 1);
      levelOrderHelp(root->right, v, level + 1);
    }
-
 
    std::vector<std::vector<int>> levelOrder2(TreeNode* root) {
      std::queue<TreeNode*> s1;
@@ -54,8 +50,8 @@ class BinaryTreeLevelOrderTraversal {
        while(!s1.empty()) {
          iter = s1.front();
          tmp.push_back(iter->val);
-         if (NULL != iter->left) s2.push(iter->left);
-         if (NULL != iter->right) s2.push(iter->right);
+         if (iter->left) s2.push(iter->left);
+         if (iter->right) s2.push(iter->right);
          s1.pop();
        }
 
@@ -64,8 +60,8 @@ class BinaryTreeLevelOrderTraversal {
          while(!s2.empty()) {
            iter = s2.front();
            tmp.push_back(iter->val);
-           if (NULL != iter->left) s1.push(iter->left);
-           if (NULL != iter->right) s1.push(iter->right);
+           if (iter->left) s1.push(iter->left);
+           if (iter->right) s1.push(iter->right);
            s2.pop();
          }
        }

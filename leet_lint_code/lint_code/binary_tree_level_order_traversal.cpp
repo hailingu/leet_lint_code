@@ -31,16 +31,12 @@ class BinaryTreeLevelOrderTraversal {
    void levelOrderHelp(TreeNode* root, std::vector<std::vector<int>> &v, int level) {
      if (NULL == root) return ;
      int len = (int) v.size();
-     if (len - 1 < level) {
-       std::vector<int> tmp;
-       v.push_back(tmp);
-     }
+     if (len - 1 < level) v.push_back(std::vector<int>());
 
      v[level].push_back(root->val);
      levelOrderHelp(root->left, v, level + 1);
      levelOrderHelp(root->right, v, level + 1);
    }
-
 
    std::vector<std::vector<int>> levelOrder2(TreeNode* root) {
      std::queue<TreeNode*> s1;
