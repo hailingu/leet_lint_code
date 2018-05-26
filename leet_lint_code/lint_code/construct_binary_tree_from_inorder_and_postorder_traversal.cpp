@@ -31,7 +31,7 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
     std::map<int, int> inorder_map;
     std::map<int, int> postorder_map;
     std::set<int> used;
-    for (size_t i = 0; i < len; ++i) {
+    for (int i = 0; i < len; ++i) {
       inorder_map[inorder[i]] = i;
       postorder_map[postorder[i]] = i;
     }
@@ -52,13 +52,13 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
     int i = root_post_index - 1;
     bool found_left = false, found_right = false;
     while (i >= 0) {
-      if (inorder_map[postorder[i]] < root_inorder_index && used.find(postorder[i]) == used.end() && !found_left) {
+      if (!found_left && inorder_map[postorder[i]] < root_inorder_index && used.find(postorder[i]) == used.end()) {
         root->left = new TreeNode(postorder[i]);
         used.insert(postorder[i]);
         found_left = true;
       }
       
-      if (inorder_map[postorder[i]] > root_inorder_index && used.find(postorder[i]) == used.end() && !found_right) {
+      if (!found_right && inorder_map[postorder[i]] > root_inorder_index && used.find(postorder[i]) == used.end()) {
         root->right = new TreeNode(postorder[i]);
         used.insert(postorder[i]);
         found_right = true;
