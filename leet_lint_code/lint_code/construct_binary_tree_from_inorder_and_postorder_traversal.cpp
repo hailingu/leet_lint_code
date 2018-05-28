@@ -28,11 +28,7 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
     if (!postorder.size()) return NULL;
     int len = (int) postorder.size();
     std::map<int, int> inorder_map;
-    std::map<int, int> postorder_map;
-    for (int i = 0; i < len; ++i) {
-      inorder_map[inorder[i]] = i;
-      postorder_map[postorder[i]] = i;
-    }
+    for (int i = 0; i < len; ++i) inorder_map[inorder[i]] = i;
 
     TreeNode* root = buildTreeHelp(inorder, postorder, 0, len - 1, inorder_map, postorder_map);
     return root;
@@ -40,7 +36,7 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
 
   TreeNode * buildTreeHelp(std::vector<int> &inorder, std::vector<int> &postorder,
                            int p_begin, int p_end,
-                           std::map<int, int> &inorder_map,  std::map<int, int> &postorder_map) {
+                           std::map<int, int> &inorder_map) {
 
     if (p_begin > p_end) return NULL;
     TreeNode* root = new TreeNode(postorder[p_end]);
@@ -55,8 +51,8 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
     }
 
     int right_index = p_end - 1;
-    root->left = buildTreeHelp(inorder, postorder, p_begin, left_index, inorder_map, postorder_map);
-    root->right = buildTreeHelp(inorder, postorder,  left_index + 1, right_index, inorder_map, postorder_map);
+    root->left = buildTreeHelp(inorder, postorder, p_begin, left_index, inorder_map);
+    root->right = buildTreeHelp(inorder, postorder,  left_index + 1, right_index, inorder_map);
 
     return root;
   }
