@@ -22,7 +22,7 @@ class TreeNode {
    TreeNode *left, *right;
 };
 
-class BinaryTreeLevelOrderTraversalII {
+class BinaryTreeZigzagLevelOrderTraversal {
  public:
    std::vector<std::vector<int>> zigzagLevelOrder(TreeNode * root) {
      std::vector<std::vector<int>> v;
