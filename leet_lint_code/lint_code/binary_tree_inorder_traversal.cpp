@@ -1,4 +1,4 @@
-  // Copyright © 2018 Hailin Gu. All rights reserved.
+// Copyright © 2018 Hailin Gu. All rights reserved.
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of lint code problem 67.
