@@ -21,8 +21,7 @@ class Backpack {
      if (index < 0 || m <= 0) return 0;
      if (-1 != mem[m]) return mem[m];
      if (m < A[index]) mem[m] = backPackHelp(m, A, mem, index - 1);
-     else
-       mem[m] = std::max(backPackHelp(m, A, mem, index - 1), backPackHelp(m - A[index], A, mem, index - 1) + A[index]);
+     else mem[m] = std::max(backPackHelp(m, A, mem, index - 1), backPackHelp(m - A[index], A, mem, index - 1) + A[index]);
      return mem[m];
    }
 };
