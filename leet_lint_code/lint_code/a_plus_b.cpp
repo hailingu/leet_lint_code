@@ -11,7 +11,7 @@
 class APlusB {
  public:
    int aplusb(int a, int b) {
-     while (b != 0) {
+     while (b) {
          int t = a;
          a = b ^ a;
          b = (b & t) << 1;
