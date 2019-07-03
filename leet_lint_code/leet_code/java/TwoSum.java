@@ -1,3 +1,9 @@
+// Copyright © 2018 Hailin Gu. All rights reserved.
+// License(GPL)
+// Author: Hailin Gu
+// This is a answer of leet code problem 1.
+// Date: 2019.7.2
+
 import java.util.HashMap;
 import java.util.Map;
 
