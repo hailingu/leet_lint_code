@@ -2,6 +2,7 @@
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of leet code problem 2.
+// Date: 2019.7.3
 
 #ifndef LEETLINTCODE_LINTCODE_FINDMEDIANSORTEDARRAYS_CPP
 #define LEETLINTCODE_LINTCODE_FINDMEDIANSORTEDARRAYS_CPP
