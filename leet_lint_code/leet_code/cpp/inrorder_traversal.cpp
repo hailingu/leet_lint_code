@@ -17,6 +17,18 @@ struct TreeNode {
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
-        
+        vector<int> v = vector<int>();
+        inorderTraversalHelp(root, v);
+        return v;
     }
+
+    void inorderTraversalHelp(TreeNode* root, vector<int>& v) {
+        if (root == NULL) {
+            return ;
+        } 
+
+        inorderTraversalHelp(root->left, v);
+        v.push_back(root->val);
+        inorderTraversalHelp(root->right, v);
+    }    
 };
