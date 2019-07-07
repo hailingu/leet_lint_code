@@ -2,6 +2,7 @@
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of leet code problem 92.
+// Date: 
 
 #ifndef LEETLINTCODE_LINTCODE_REVERSELINKEDLISTII_CPP
 #define LEETLINTCODE_LINTCODE_REVERSELINKEDLISTII_CPP
