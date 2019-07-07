@@ -18,21 +18,7 @@ struct TreeNode {
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        if (root == NULL) {
-            return true;
-        }
-        
-        bool isValidLeft = true;
-        if (root->left != NULL) {
-            isValidLeft = root->val > root->left->val && isValidBSTHelp(root->left, (numeric_limits<long>::min)(), root->val);
-        }
-        
-        bool isValidRight = true;
-        if (root->right != NULL) {
-            isValidRight = root->val < root->right->val && isValidBSTHelp(root->right, root->val,(numeric_limits<long>::max)());
-        }
-        
-        return isValidLeft && isValidRight;
+        return isValidBSTHelp(root,  (numeric_limits<long>::min)(), (numeric_limits<long>::max)());
     }
     
     bool isValidBSTHelp(TreeNode* root, long lower, long upper) {
@@ -43,5 +29,5 @@ public:
         return root->val > lower && root->val < upper && 
             isValidBSTHelp(root->left, lower, root->val) &&
             isValidBSTHelp(root->right, root->val, upper);
-    }  
+    }
 };

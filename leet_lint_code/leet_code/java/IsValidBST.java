@@ -16,21 +16,7 @@ public class IsValidBST {
     }
 
     public boolean isValidBST(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
-
-        boolean leftIsValid = true;
-        if (root.left != null) {
-            leftIsValid = root.left.val < root.val && isValidBSTHelp(root.left, Long.MIN_VALUE, root.val);
-        }
-
-        boolean rightIsValid = true;
-        if (root.right != null) {
-            rightIsValid = root.right.val > root.val && isValidBSTHelp(root.right, root.val, Long.MAX_VALUE);
-        }
-
-        return leftIsValid && rightIsValid;
+        return isValidBSTHelp(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
     boolean isValidBSTHelp(TreeNode root, long lower, long upper) {
