@@ -23,6 +23,35 @@ public class ReverseList {
 
         return head;
     }
+
+    ListNode reverseList2(ListNode head) {
+        List<ListNode> list = new ArrayList<>();
+        ListNode cur = head;
+        while (cur != null) {
+            list.add(cur);
+            cur = cur.next;
+        }
+
+        reverseHelp(list, 0, list.size() - 1);
+        head = list.get(0);
+        cur = head;
+        for (ListNode node : list) {
+            if (node != cur) {
+                cur.next = node;
+                cur = cur.next;
+            }
+        }
+        cur.next = null;
+        return head;
+    }
+
+    void reverseHelp(List<ListNode> list, int from, int to) {
+        while (from < to) {
+            ListNode tmp = list.get(from);
+            list.set(from ++, list.get(to));
+            list.set(to --, tmp);
+        }
+    }
 }
 
 class ListNode {
