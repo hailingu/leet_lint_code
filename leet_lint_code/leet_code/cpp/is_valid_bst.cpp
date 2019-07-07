@@ -2,6 +2,7 @@
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of leet code problem 98.
+// Date: 2019.7.8
 
 #include <iostream>
 
