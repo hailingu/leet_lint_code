@@ -1,6 +1,6 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
-// Author: leetcode
+// Author: Hailin Gu
 // This is a answer of leet code problem 344.
 // Date: 2019.7.7
 
