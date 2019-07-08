@@ -22,3 +22,5 @@ leet_lint_code/leet_lint_code.xcodeproj/project.pbxproj
 leet_lint_code.xcodeproj/xcuserdata/hailingu.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
 
 leet_lint_code/lint_code/LFU_cache_too_slow_version.cpp
+
+.vscode
