@@ -18,7 +18,6 @@ public class ValidateStackSequences {
         }
 
         Stack<Integer> stack = new Stack<>();
-
         int poppedIdx = 0;
         int stackIdx = 0;
 
