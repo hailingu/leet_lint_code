@@ -6,20 +6,17 @@
 
 class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
-        if (nums.length < 1) {
-            return 0;
-        }
+        int i = 0;
+        int j = i + 1;
         
-        int removedCnt = 0;
-        int val = nums[0];
-        for (int i = 1; i < nums.length; ++ i) {
-            if (nums[i] == val) {
-                removedCnt ++;
+        while (j < nums.length) {
+            if (nums[i] != nums[j]) {
+                nums[++ i] = nums[j ++];
             } else {
-                nums[i - removedCnt] = nums[i];
-                val = nums[i];
+                ++ j;
             }
         }
-        return nums.length - removedCnt;
+        
+        return i + 1;
     }
 }
