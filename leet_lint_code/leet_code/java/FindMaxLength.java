@@ -29,7 +29,7 @@ public class FindMaxLength {
             }
 
             if (map.containsKey(left)) {
-                ans = Math.max(ans, i - map.get(left) + 1);
+                ans = Math.max(ans, i - map.get(left));
             } else {
                 map.put(left, i);
             }
