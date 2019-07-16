@@ -11,12 +11,12 @@ class PlusOne {
         carrier = sum / 10;
         digits[digits.length - 1] = sum % 10;
         
-        for (int i = digits.length - 2; i > -1; -- i) {
-            if (carrier > 0) {
-                sum = digits[i] + carrier;
-                carrier = sum / 10;
-                digits[i] = sum % 10;
-            }
+        for (int i = digits.length - 2; i > -1 && carrier > 0; -- i) {
+
+            sum = digits[i] + carrier;
+            carrier = sum / 10;
+            digits[i] = sum % 10;
+    
         }
         
         int[] ans;
