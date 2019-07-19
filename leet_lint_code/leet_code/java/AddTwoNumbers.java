@@ -1,4 +1,3 @@
-
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: Hailin Gu
