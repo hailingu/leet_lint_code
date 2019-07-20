@@ -46,11 +46,4 @@ class CarFleet {
         }
         return cnt;
     }
-
-    public static void main(String[] args) {
-        CarFleet carFleet = new CarFleet();
-        int[] pos = new int[]{10, 8, 0, 5, 3};
-        int[] speed = new int[]{2, 4, 1, 1, 1};
-        carFleet.carFleet(12, pos, speed);
-    }
 }
