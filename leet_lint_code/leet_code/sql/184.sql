@@ -1,0 +1,1 @@
+select Department.Name as Department, Employee.Name as Employee, Employee.Salary as Salary from Employee left join Department on Employee.DepartmentId = Department.Id where Salary = ( select max(salary) from Employee b where Employee.DepartmentId = b.DepartmentId) and Department.Name is not null
