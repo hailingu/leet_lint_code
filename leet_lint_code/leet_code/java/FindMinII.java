@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: leetcode
-// This is a answer of leet code problem 153.
+// This is a answer of leet code problem 154.
 // Date: 2019.7.23
 
 class FindMin {
