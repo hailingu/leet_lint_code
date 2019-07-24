@@ -11,26 +11,16 @@ class LengthOfLongestSubstring {
         int i = 0;
         int j = 0;
         int ans = 0;
-        int mAns = 0;
 
         while (i < s.length()) {
             if (map.containsKey(s.charAt(i))) {
-                int t = map.get(s.charAt(i));
-                ans = Math.max(ans, mAns);
-                mAns = i - t;
-                while (j <= t) {
-                    map.remove(s.charAt(j++));
-                }
-            } else {
-                mAns ++;
+                j = Math.max(map.get(s.charAt(i)), j);
             }
             
-            map.put(s.charAt(i), i);
+            ans = Math.max(ans, i - j + 1);
+            map.put(s.charAt(i), i + 1);
             i ++;
-           
         }
-
-        ans = Math.max(ans, map.size());
         return ans;
     }
 }
