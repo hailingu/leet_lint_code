@@ -1,6 +1,8 @@
+import java.util.Set;
+
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
-// Author: leetcode
+// Author: Hailin Gu
 // This is a answer of leet code problem 457.
 // Date: 2019.7.25
 
@@ -40,7 +42,9 @@ class CircularArrayLoop {
             }
 
             memo.clear();
-            i++;
+            while (impossible.contains(++ i) && i < nums.length) {
+                i++;
+            } 
             j = i;
         }
         return false;
