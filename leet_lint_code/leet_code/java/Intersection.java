@@ -16,9 +16,7 @@ class Intersection {
         
         while (i < nums1.length && j < nums2.length) {
             if (nums1[i] == nums2[j]) {
-                if (filter.size() > 0 && filter.get(filter.size() - 1) == nums1[i]) {
-                   // filter.add(nums1[i]);
-                } else {
+                if (filter.size() < 0 || filter.get(filter.size() - 1) != nums1[i]) {
                     filter.add(nums1[i]);
                 }
                 
