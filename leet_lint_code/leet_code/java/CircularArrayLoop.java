@@ -16,10 +16,9 @@ class CircularArrayLoop {
         Set<Integer> memo = new HashSet<Integer>();
 
         int i = 0, j = 0, last = -1;
-        int sgn = nums[i] > 0 ? 1 : -1;
 
         while (i < nums.length) {
-            sgn = nums[i] > 0 ? 1 : -1;
+            int sgn = nums[i] > 0 ? 1 : -1;
             memo.add(i);
             while (!impossible.contains(j)) {
                 if (sgn * nums[j] <= 0 || last == j) {
@@ -29,11 +28,12 @@ class CircularArrayLoop {
                     memo.add(j);
                     last = j;
                     j += nums[j];
+                    j %= nums.length;
 
-                    while (j < 0) {
+                    if (j < 0) {
                         j += nums.length;
                     }
-                    j %= nums.length;
+                    
                     if (memo.contains(j) && last != j) {
                         return true;
                     }
@@ -42,9 +42,7 @@ class CircularArrayLoop {
             }
 
             memo.clear();
-            while (impossible.contains(++ i) && i < nums.length) {
-                i++;
-            } 
+            while (++i < nums.length && impossible.contains(i)) {} 
             j = i;
         }
         return false;
