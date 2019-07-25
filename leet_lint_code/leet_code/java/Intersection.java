@@ -24,7 +24,7 @@ class Intersection {
                 j ++;
             } else {
                 if (nums1[i] > nums2[j]) {
-                   ++ j;
+                    ++ j;
                 } else {
                     ++ i;
                 }
