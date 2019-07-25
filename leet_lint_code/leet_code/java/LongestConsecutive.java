@@ -16,17 +16,15 @@ class LongestConsecutive {
         int max = 0;
         for (int i = 0; i < nums.length; ++ i) {
             int temp = 1;
-            if (finded.contains(nums[i])) {
-                continue;
-            } else {
+            if (!finded.contains(nums[i])) {
                 int t = nums[i] - 1;
                 while (set.contains(t)) {
                     finded.add(t);
                     t --;
                     temp ++;
                 }
-            }
-            max = max > temp ? max : temp;
+                max = max > temp ? max : temp;
+            }   
         }
         
         return max;
