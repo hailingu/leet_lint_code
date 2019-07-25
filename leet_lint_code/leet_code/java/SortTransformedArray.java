@@ -1,6 +1,6 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
-// Author: leetcode
+// Author: Hailin Gu
 // This is a answer of leet code problem 360.
 // Date: 2019.7.26
 
@@ -36,7 +36,7 @@ class SortTransformedArray {
                 if (nums[i] - aos > aos - nums[j]) {
                     ans[q ++] = calc(nums[j], a, b, c);
                     --j;
-                } else if (nums[i] - aos <= aos - nums[j]) {
+                } else {
                     ans[q ++] = calc(nums[i], a, b, c);
                     ++i;
                 }
