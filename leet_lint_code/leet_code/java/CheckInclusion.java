@@ -28,9 +28,7 @@ class CheckInclusion {
                 if (memo[c] > target[c]) {
                     int idx = j + m;
                     while (memo[c] > target[c]) {
-                        char h = s2.charAt(j);
-                        memo[h]--;
-                        j++;
+                        memo[s2.charAt(j ++)]--;
                     }
                     m = idx - j + 1;
                 } else {
@@ -39,9 +37,7 @@ class CheckInclusion {
             } else if (target[c] == 0) {
                 int idx = j + m;
                 while (j < idx) {
-                    char h = s2.charAt(j);
-                    memo[h] --;
-                    ++j;
+                    memo[s2.charAt(j ++)]--;
                 }
                 j = idx + 1;
                 m = 0;
