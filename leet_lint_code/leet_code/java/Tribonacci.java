@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: leetcode
-// This is a answer of leet code problem [].
+// This is a answer of leet code problem 1137.
 // Date: 2019.7.28
 
 class Tribonacci {
@@ -32,5 +32,4 @@ class Tribonacci {
         memo.put(n, ans);
         return ans;
     }
-    
 }
