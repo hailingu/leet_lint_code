@@ -1,5 +1,3 @@
-import java.util.Set;
-
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: Hailin Gu
@@ -16,7 +14,7 @@ class CircularArrayLoop {
         Set<Integer> memo = new HashSet<Integer>();
 
         int i = 0, j = 0, last = -1;
-
+        
         while (i < nums.length) {
             int sgn = nums[i] > 0 ? 1 : -1;
             memo.add(i);
