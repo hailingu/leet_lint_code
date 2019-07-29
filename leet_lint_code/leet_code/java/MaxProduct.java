@@ -4,14 +4,10 @@
 // This is a answer of leet code problem 152.
 // Date: 2019.7.16
 
-import java.util.HashMap;
-import java.util.Map;
-
 
 class MaxProduct {
     public int maxProduct(int[] nums) {
         int max = nums[0];
-        Map<Integer, Integer> map = new HashMap<>();
         int ans = nums[0];
         int min = nums[0];
         
