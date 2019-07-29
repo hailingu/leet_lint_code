@@ -4,8 +4,8 @@
 // This is a answer of leet code problem 1015.
 // Date: 2019.7.13
 
-class Solution {
-    public int SmallestRepunitDivByK(int K) {
+class SmallestRepunitDivByK {
+    public int smallestRepunitDivByK(int K) {
         
         if (K % 2 == 0 || K % 5 == 0) {
             return -1;

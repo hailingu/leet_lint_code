@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 1137.
 // Date: 2019.7.28
 
+import java.util.Map;
+import java.util.HashMap;
+
 class Tribonacci {
     public int tribonacci(int n) {
         Map<Integer, Integer> memo = new HashMap<>();

@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 86.
 // Date: 2019.7.27
 
+import java.util.List;
+import java.util.ArrayList;
+
 class Partition {
     public ListNode partition(ListNode head, int x) {
         if (head == null) {

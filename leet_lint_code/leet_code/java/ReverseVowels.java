@@ -4,6 +4,10 @@
 // This is a answer of leet code problem 345.
 // Date: 2019.7.23
 
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Arrays;
+
 class ReverseVowels {
     public String reverseVowels(String s) {
         StringBuilder ans = new StringBuilder(s);

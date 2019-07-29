@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 206.
 // Date: 2019.7.5
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class ReverseList {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {

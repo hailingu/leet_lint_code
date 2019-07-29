@@ -4,6 +4,10 @@
 // This is a answer of leet code problem 46.
 // Date: 2019.7.10
 
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Permutation {
 
     void backtrack(int n, List<Integer> nums, List<List<Integer>> output, int first) {

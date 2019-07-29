@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 974.
 // Date: 2019.7.18
 
+import java.util.Map;
+import java.util.HashMap;
+
 class SubarraysDivByK {
     public int subarraysDivByK(int[] nums, int K) {
         if (nums.length < 1) {
