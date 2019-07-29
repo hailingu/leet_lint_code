@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 457.
 // Date: 2019.7.25
 
+import java.util.HashSet;
+import java.util.Set;
+
 class CircularArrayLoop {
     public boolean circularArrayLoop(int[] nums) {
         if (nums.length == 0) {
@@ -35,7 +38,6 @@ class CircularArrayLoop {
                     if (memo.contains(j) && last != j) {
                         return true;
                     }
-                    
                 }
             }
 

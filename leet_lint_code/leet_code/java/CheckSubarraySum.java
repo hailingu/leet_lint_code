@@ -4,6 +4,10 @@
 // This is a answer of leet code problem 523.
 // Date: 2019.7.15
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 class CheckSubarraySum {
     public boolean checkSubarraySum(int[] nums, int k) {
      if (nums.length < 2) {
