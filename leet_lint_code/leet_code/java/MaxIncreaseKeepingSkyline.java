@@ -1,7 +1,8 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License(GPL)
 // Author: Hailin Gu
-// This is a answer of leet code problem 844.
+// This is a answer of leet code problem 807.
+// Date: 2019.7.29
 
 public class MaxIncreaseKeepingSkyline {
     public int maxIncreaseKeepingSkyline(int[][] grid) {
