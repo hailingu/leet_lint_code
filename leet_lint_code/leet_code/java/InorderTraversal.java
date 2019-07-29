@@ -4,13 +4,26 @@
 // This is a answer of leet code problem 94.
 // Date: 2019.7.4
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class InorderTraversal {
 
-    private List<Integer> l = new ArrayList<>();
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+    
+    private List<Integer> list = new ArrayList<>();
 
     List<Integer> inorderTraversal(TreeNode root) {
         inorderTraversalHelp(root);
-        return l;
+        return list;
     }
 
     void inorderTraversalHelp(TreeNode root) {
@@ -19,7 +32,7 @@ public class InorderTraversal {
         }
 
         inorderTraversal(root.left);
-        l.add(root.val);
+        list.add(root.val);
         inorderTraversal(root.right);
     }
 }

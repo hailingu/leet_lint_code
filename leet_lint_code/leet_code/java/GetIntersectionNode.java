@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 160.
 // Date: 2019.7.19
 
+import java.util.Set;
+import java.util.HashSet;
+
 public class GetIntersectionNode {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         Set<ListNode> set=  new HashSet<>();
