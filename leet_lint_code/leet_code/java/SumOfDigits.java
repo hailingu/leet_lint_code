@@ -19,7 +19,7 @@ class SumOfDigits {
             sum += min % 10;
             min = min / 10;
         }
-        
+         
         if (sum % 2 == 1) {
             return 0;
         }
