@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: Hailin Gu
-// This is a answer of leet code problem 1138.
+// This is a answer of leet code problem 561.
 // Date: 2019.7.29
 
 
