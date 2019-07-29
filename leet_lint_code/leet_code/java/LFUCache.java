@@ -4,6 +4,11 @@
 // This is a answer of leet code problem 460.
 // Date: 2019.7.18
 
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Collections;
+
+
 class LFUCache {
     
     class HitInfo implements Comparable<HitInfo>{

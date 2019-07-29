@@ -4,6 +4,10 @@
 // This is a answer of leet code problem 349.
 // Date: 2019.7.22
 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
 class Intersection {
     public int[] intersection(int[] nums1, int[] nums2) {
         List<Integer> filter = new ArrayList<>();

@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 128.
 // Date: 2019.7.15
 
+import java.util.HashSet;
+import java.util.Set;
+
 class LongestConsecutive {
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();

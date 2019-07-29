@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 146.
 // Date: 2019.7.19
 
+import java.util.Map;
+import java.util.LinkedHashMap;
+
 class LRUCache {
     Cache<Integer, Integer> cache;
 

@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 225.
 // Date: 2019.7.27
 
+import java.util.List;
+import java.util.LinkedList;
+
 class MyStack {
 
     List<Integer> list = new LinkedList<>();

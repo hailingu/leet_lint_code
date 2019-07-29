@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 3.
 // Date: 2019.7.25
 
+import java.util.HashMap;
+import java.util.Map;
+
 class LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>();
