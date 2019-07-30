@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 2.
 // Date: 2019.7.19
 
-class Solution {
+class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode i1 = l1;
         ListNode i2 = l2;
