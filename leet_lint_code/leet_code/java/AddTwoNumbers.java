@@ -6,11 +6,8 @@
 
 class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode i1 = l1;
-        ListNode i2 = l2;
-        
         ListNode ans = new ListNode(-1);
-        ListNode ansIter = ans;
+        ListNode i1 = l1, i2 = l2, ansIter = ans;
 
         int carrier = 0;
         while (i1 != null && i2 != null) {
