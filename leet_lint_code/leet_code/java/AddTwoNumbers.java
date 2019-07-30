@@ -4,57 +4,53 @@
 // This is a answer of leet code problem 2.
 // Date: 2019.7.19
 
-
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        List<ListNode> l1List = new ArrayList<>();
-        List<ListNode> l2List = new ArrayList<>();
+        ListNode i1 = l1;
+        ListNode i2 = l2;
         
-        ListNode iter = l1;
-        while (iter != null) {
-            l1List.add(iter);
-            iter = iter.next;
-        }
-        
-        iter = l2;
-        while (iter != null) {
-            l2List.add(iter);
-            iter = iter.next;
-        }
-        
-        if (l1List.size() < l2List.size()) {
-            List<ListNode> t = l1List;
-            l1List = l2List;
-            l2List = t;
-        }
-        
-        int i = 0;
-        int sum = 0;
+        ListNode ans = new ListNode(-1);
+        ListNode ansIter = ans;
+
         int carrier = 0;
-        for (; i < l2List.size(); ++ i) {
-            sum = l1List.get(i).val + l2List.get(i).val + carrier;
-            carrier = sum / 10;
-            l1List.get(i).val = sum % 10;
+        while (i1 != null && i2 != null) {
+            i1.val = i1.val + i2.val + carrier;
+            carrier = i1.val / 10;
+            i1.val = i1.val % 10;
+            ansIter.next = i1;
+            i1 = i1.next;
+            i2 = i2.next;
+            ansIter = ansIter.next;
         }
         
-        while (carrier > 0 && i < l1List.size()) {
-            sum = l1List.get(i).val + carrier;
-            carrier = sum / 10;
-            l1List.get(i).val = sum % 10;
-            ++ i;
+        if (i1 == null && i2 != null) {
+            ansIter.next = i2;
+            while (i2 != null && carrier > 0) {
+                i2.val = i2.val + carrier;
+                carrier = i2.val / 10;
+                i2.val = i2.val % 10;
+                ansIter.next = i2;
+                i2 = i2.next;
+                ansIter = ansIter.next;
+            }
         }
         
+        if (i1 != null && i2 == null) {
+            ansIter.next = i1;
+            while (i1 != null && carrier > 0) {
+                i1.val = i1.val + carrier;
+                carrier = i1.val / 10;
+                i1.val = i1.val % 10;
+                ansIter.next = i1;
+                i1 = i1.next;
+                ansIter = ansIter.next;  
+            }
+        }
+
         if (carrier > 0) {
-            l1List.add(new ListNode(1));
+            ansIter.next = new ListNode(1);
         }
-        
-        ListNode ans = l1List.get(0);
-        iter = ans;
-        for (int q = 1; q < l1List.size(); ++ q) {
-            iter.next = l1List.get(q);
-            iter = iter.next;
-        }
-        
-        return ans;
+
+        return ans.next;
     }
 }
