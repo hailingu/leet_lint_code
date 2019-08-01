@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 125.
 // Date: 2019.7.8
 
-class IsPalindromeString {
+class ValidPalindrome {
     public boolean isPalindrome(String s) {
         if (s == null || s.length() <= 1) {
             return true;
