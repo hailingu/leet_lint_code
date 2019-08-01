@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.ArrayList;;
 
 
-class IsArmstrong {
+class ArmstrongNumber {
     public boolean isArmstrong(int N) {
         int copyN = N;
         

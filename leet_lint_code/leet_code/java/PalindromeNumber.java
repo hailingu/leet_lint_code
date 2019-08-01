@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 9.
 // Date: 2019.7.8
 
-class IsPalindrome {
+class PalindromeNumber {
     public boolean isPalindrome(int x) {
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;

@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 925.
 // Date: 2019.7.11
 
-public class IsLongPressedName {
+public class LongPressedName {
     public boolean isLongPressedName(String name, String typed) {
         int nameIdx = 0;
         int nameDuplicatedCnt = 0;
