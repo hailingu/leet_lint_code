@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 98.
 // Date: 2019.7.7
 
-public class IsValidBST {
+public class ValidateBinarySearchTree {
     class TreeNode {
         int val;
         TreeNode left;
