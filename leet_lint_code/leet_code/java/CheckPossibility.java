@@ -7,31 +7,41 @@
 class CheckPossibility {
     public boolean checkPossibility(int[] nums) {
         int i = 0;
-        while (i < nums.length - 1 && nums[i] <= nums[i + 1]) {
-            ++i;
-        }
-
         
-        if (i == nums.length - 1) {
+        if (nums.length <= 2) {
             return true;
         }
-        
-        int possible1 = nums[i];
-        int possible2 = nums[i + 1];
 
-        return checkPossibilityHelp(nums, possible1, i + 1) || checkPossibilityHelp(nums, possible2, i);
-    }
+        while (i < nums.length - 1) {
+            if (nums[i] <= nums[i + 1]) {
+                ++ i;
+            } else {
+                int diffJ = i + 1;
+                while (diffJ < nums.length - 1) {
+                    if (nums[diffJ] > nums[diffJ + 1]) {
+                        break;
+                    }
+                    ++ diffJ;
+                }
+                
+                
+                if (diffJ != nums.length - 1) {
+                    return false;
+                }
 
-    boolean checkPossibilityHelp(int[] nums, int replace, int i) {
-        int origin = nums[i];
-        nums[i] = replace;
-        for (int j = 0; j < nums.length - 1; j ++) {
-            if (nums[j] > nums[j + 1]) {
-                nums[i] = origin;
-                return false;
+                boolean caseTwo = true;
+                if (i + 2 < nums.length) {
+                    caseTwo = nums[i] <= nums[i + 2];
+                }
+
+                boolean caseOne = true;
+                if (i >= 1) {
+                    caseOne = nums[i + 1] >= nums[i -1];
+                }
+
+                return caseOne || caseTwo;
             }
         }
-
         return true;
     }
 }
