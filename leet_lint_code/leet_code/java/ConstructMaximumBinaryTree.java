@@ -4,8 +4,16 @@
 // This is a answer of leet code problem 654.
 // Date: 2019.7.29
 
-
 class ConstructMaximumBinaryTree {
+    
+    class TreeNode{
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+
+    
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         return constructMaximumBinaryTreeHelp(nums, 0, nums.length - 1);
     }
@@ -14,11 +22,11 @@ class ConstructMaximumBinaryTree {
         if (left > right) {
             return null;
         }
-        
+
         if (left == right) {
             return new TreeNode(nums[left]);
         }
-        
+
         int i = left;
         int max = nums[left];
         int maxIdx = i;
@@ -27,12 +35,13 @@ class ConstructMaximumBinaryTree {
                 maxIdx = i;
                 max = nums[i];
             }
-            ++ i;
+            ++i;
         }
-        
+
         TreeNode node = new TreeNode(max);
         node.left = constructMaximumBinaryTreeHelp(nums, left, maxIdx - 1);
         node.right = constructMaximumBinaryTreeHelp(nums, maxIdx + 1, right);
         return node;
     }
-}    
+}
+

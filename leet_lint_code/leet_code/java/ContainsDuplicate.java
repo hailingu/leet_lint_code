@@ -4,6 +4,8 @@
 // This is a answer of leet code problem 217.
 // Date: 2019.7.17
 
+import java.util.Set;
+import java.util.HashSet;
 
 class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
