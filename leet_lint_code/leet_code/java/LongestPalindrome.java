@@ -41,12 +41,12 @@ public class LongestPalindrome {
 
         int r = hmx - hId - 1;
         String tmp = sb.substring(hId - r, hId + r);
-        StringBuilder sb2 = new StringBuilder();
+        StringBuilder ans = new StringBuilder();
         for (int i = 0; i < tmp.length(); ++ i) {
             if (tmp.charAt(i) != '#') {
-                sb2.append(tmp.charAt(i));
+                ans.append(tmp.charAt(i));
             }
         }
-        return sb2.toString();
+        return ans.toString();
     }
 }

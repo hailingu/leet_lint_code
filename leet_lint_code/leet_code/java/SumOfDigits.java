@@ -26,3 +26,4 @@ class SumOfDigits {
         
         return 1;
     }
+}

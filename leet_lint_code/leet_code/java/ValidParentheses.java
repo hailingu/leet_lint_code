@@ -1,3 +1,11 @@
+// Copyright © 2018 Hailin Gu. All rights reserved.
+// License
+// Author: Hailin Gu
+// This is a answer of leet code problem 20.
+// Date: 2019.8.2
+
+import java.util.Stack;
+
 class ValidParentheses {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();

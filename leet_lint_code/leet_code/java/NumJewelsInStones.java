@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 771.
 // Date: 2019.7.28
 
+import java.util.Set;
+import java.util.HashSet;
+
 class NumJewelsInStones {
     public int numJewelsInStones(String J, String S) {
         Set<Character> filter = new HashSet<>();

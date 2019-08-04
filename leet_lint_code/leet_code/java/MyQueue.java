@@ -4,6 +4,8 @@
 // This is a answer of leet code problem 232.
 // Date: 2019.7.31
 
+import java.util.Stack;
+
 class MyQueue {
 
     /** Initialize your data structure here. */
