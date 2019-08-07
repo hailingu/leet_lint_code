@@ -2,8 +2,7 @@
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of leet code problem 21.
-
-// LEETLINTCODE_LINTCODE_MERGETWOSORTEDLISTS_JAVA
+// Date: 2019.8.8
 
 class mergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
