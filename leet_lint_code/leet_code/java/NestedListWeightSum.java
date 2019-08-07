@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 339.
 // Date: 2019.8.8
 
+import java.util.List;
+import java.util.ArrayList;
+
 class NestedListWeightSum {
     public int depthSum(List<NestedInteger> nestedList) {
         return depthSum(nestedList, 1);
