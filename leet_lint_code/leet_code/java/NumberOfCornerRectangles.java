@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 750.
 // Date: 2019.8.5
 
-public class NumberofCornerRectangles {
+public class NumberOfCornerRectangles {
     public int countCornerRectangles(int[][] grid) {
         int m = grid.length;
         if (m == 0) {
