@@ -2,6 +2,7 @@
 // License(GPL)
 // Author: Hailin Gu
 // This is a answer of leet code problem 844.
+// Date: 2019.8.8
 
 class BackSpaceCompare {
   public boolean backspaceCompare(String S, String T) {
