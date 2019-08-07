@@ -1,7 +1,11 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License(GPL)
 // Author: Hailin Gu
-// This is a answer of leet code problem 844.
+// This is a answer of leet code problem 830.
+// Date: 2019.8.8
+
+import java.util.List;
+import java.util.ArrayList;
 
 class PositionsOfLargeGroups {
   public List<List<Integer>> largeGroupPositions(String S) {
