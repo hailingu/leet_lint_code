@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 21.
 // Date: 2019.8.8
 
-class mergeTwoSortedLists {
+class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (null == l1) return l2;
         if (null == l2) return l1;
