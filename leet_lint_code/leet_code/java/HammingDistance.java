@@ -14,6 +14,5 @@ class HammingDistance {
         }
         
         return ans;
-        return ans;
     }
 }
