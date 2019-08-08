@@ -7,34 +7,13 @@
 class HammingDistance {
     public int hammingDistance(int x, int y) {
         int ans = 0;
-        if (x == y) {
-            return ans;
-        }
-        
-        int lastDigitX;
-        int lastDigitY;
-        
-        while (x > 0 && y > 0) {
-            lastDigitX = x & 1;
-            x = x >>> 1;
-            lastDigitY = y & 1;
-            y = y >>> 1;
-            
-            if (lastDigitX != lastDigitY) {
-                ans ++ ;
-            }
-        }
-        
+        x = x ^ y;
         while (x > 0) {
+            ans ++;
             x = x & (x - 1);
-            ans ++;
         }
         
-        while (y > 0) {
-            y = y & (y - 1);
-            ans ++;
-        }
-        
+        return ans;
         return ans;
     }
 }
