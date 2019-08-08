@@ -29,14 +29,21 @@ class ShortestWordDistanceII {
     }
     
     public int shortest(String word1, String word2) {
-        int ans = Integer.MAX_VALUE;
-
+        int index = 0;
+        
         List<Integer> wordIdx1List = memo.get(word1);
         List<Integer> wordIdx2List = memo.get(word2);
         
-        for (int i : wordIdx1List) {
-            for (int j : wordIdx2List) {
-                ans = Math.min(ans, Math.abs(i - j));
+        int i = 0;
+        int j = 0;
+        
+        int ans = Integer.MAX_VALUE;
+        while (i < wordIdx1List.size() && j < wordIdx2List.size()) {
+            ans = Math.min(ans, Math.abs(wordIdx1List.get(i) - wordIdx2List.get(j)));
+            if (wordIdx1List.get(i) < wordIdx2List.get(j)) {
+                i++;
+            } else {
+                j++;
             }
         }
 
