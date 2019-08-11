@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: leetcode
-// This is a answer of leet code problem 167.
+// This is a answer of leet code problem 162.
 // Date: 2019.8.11
 
 class FindPeakElement {
