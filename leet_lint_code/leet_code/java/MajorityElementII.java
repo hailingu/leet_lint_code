@@ -4,7 +4,6 @@
 // This is a answer of leet code problem 229.
 // Date: 2019.8.12
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +23,10 @@ public class MajorityElementII {
                 cnt1++;
             } else if (ans1 == num) {
                 ++cnt1;
-            } else if (cnt2 == 0){
+            } else if (cnt2 == 0) {
                 ans2 = num;
-                cnt2 ++;
-            }else if (ans2 == num) {
+                cnt2++;
+            } else if (ans2 == num) {
                 ++cnt2;
             } else {
                 cnt1--;
