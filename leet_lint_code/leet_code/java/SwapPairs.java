@@ -32,11 +32,6 @@ class SwapPairs {
             b.next = a;
             
             c = a;
-            
-            if (a == null) {
-                break;
-            }
-            
             a = a.next;
             
             if (a == null) {
