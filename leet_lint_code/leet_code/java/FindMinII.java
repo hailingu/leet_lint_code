@@ -4,7 +4,7 @@
 // This is a answer of leet code problem 154.
 // Date: 2019.7.23
 
-class FindMin {
+class FindMinII {
     public int findMin(int[] nums) {
         if (nums.length == 1) {
             return nums[0];
