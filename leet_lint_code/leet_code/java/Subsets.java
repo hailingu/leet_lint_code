@@ -14,12 +14,11 @@ class Subsets {
         List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
         
-    
         List<List<Integer>> tmp = new ArrayList<>();
         for (int i : nums) {
              tmp.clear();
-            for (List list: ans) {
-                List nList = new ArrayList(list);
+            for (List<Integer> list: ans) {
+                List<Integer> nList = new ArrayList<Integer>(list);
                 nList.add(i);
                 tmp.add(nList);
             }

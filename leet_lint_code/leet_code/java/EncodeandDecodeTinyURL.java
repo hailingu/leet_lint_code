@@ -4,14 +4,17 @@
 // This is a answer of leet code problem 535.
 // Date: 2019.8.8
 
-public class Codec {
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Random;
+
+public class EncodeandDecodeTinyURL {
 
     Map<String, String> memo = new HashMap<>();
     String chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     Random rnd = new Random();
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
-        int nextPos = memo.size() + 1;
         String key;
         while (true){
             key = "";

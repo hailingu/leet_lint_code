@@ -4,6 +4,8 @@
 // This is a answer of leet code problem 274.
 // Date: 2019.8.11
 
+import java.util.Arrays;
+
 class HIndex {
     public int hIndex(int[] citations) {
         Arrays.sort(citations);
