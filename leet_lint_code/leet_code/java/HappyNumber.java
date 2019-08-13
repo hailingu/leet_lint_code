@@ -40,7 +40,6 @@ class HappyNumber {
             return false;
         }
 
-
         return isHappy(replace, memo, memo2);
     }
 }
