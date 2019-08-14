@@ -9,37 +9,37 @@ import java.util.*;
 public class BinaryTreeLevelOrderTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
-        Queue<TreeNode> stack1 = new LinkedList<>();
-        Queue<TreeNode> stack2 = new LinkedList<>();
+        Queue<TreeNode> queue1 = new LinkedList<>();
+        Queue<TreeNode> queue2 = new LinkedList<>();
         if (root == null) {
             return ans;
         }
 
-        stack1.add(root);
-        while (!stack1.isEmpty() || !stack2.isEmpty()) {
+        queue1.add(root);
+        while (!queue1.isEmpty() || !queue2.isEmpty()) {
              List<Integer> levelAns = new ArrayList<>();
 
-             if (stack1.isEmpty()) {
-                 while (!stack2.isEmpty()) {
-                     TreeNode head = stack2.poll();
+             if (queue1.isEmpty()) {
+                 while (!queue2.isEmpty()) {
+                     TreeNode head = queue2.poll();
                      if (head.left != null) {
-                         stack1.add(head.left);
+                         queue1.add(head.left);
                      }
 
                      if (head.right != null) {
-                         stack1.add(head.right);
+                         queue1.add(head.right);
                      }
                      levelAns.add(head.val);
                  }
              } else {
-                 while (!stack1.isEmpty()) {
-                     TreeNode head = stack1.poll();
+                 while (!queue1.isEmpty()) {
+                     TreeNode head = queue1.poll();
                      if (head.left != null) {
-                         stack2.add(head.left);
+                         queue2.add(head.left);
                      }
 
                      if (head.right != null) {
-                         stack2.add(head.right);
+                         queue2.add(head.right);
                      }
                      levelAns.add(head.val);
                  }
