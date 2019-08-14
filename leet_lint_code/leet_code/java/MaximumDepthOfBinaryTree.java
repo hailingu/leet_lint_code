@@ -14,7 +14,6 @@ class MaximumDepthOfBinaryTree {
         if (root == null) {
             return level;
         }
-        
         return Math.max(maxDepth(root.left, level + 1), maxDepth(root.right, level + 1));
     }
 }
