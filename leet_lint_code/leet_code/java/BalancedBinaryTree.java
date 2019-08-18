@@ -1,3 +1,8 @@
+// Copyright © 2018 Hailin Gu. All rights reserved.
+// License(GPL)
+// Author: Hailin Gu
+// This is a answer of leet code problem 110.
+// Date: 2019.8.18
 
 class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
