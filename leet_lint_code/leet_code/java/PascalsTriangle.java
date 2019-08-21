@@ -33,7 +33,7 @@ class PascalsTriangle {
                 levelAns.add(1);
                 ans.add(levelAns);
             }
-        }
+        } 
         return ans;
     }
 }
