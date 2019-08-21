@@ -40,15 +40,31 @@ class PascalsTriangleII {
         if (m > n / 2) {
             m = n - m;
         }
-        return (factorial(BigInteger.valueOf(n), BigInteger.valueOf(n - m + 1)).divide(factorial(BigInteger.valueOf(m), BigInteger.valueOf(1)))).intValueExact();
-    }
-    
-    BigInteger factorial(BigInteger n, BigInteger end) {
-        if (n.intValueExact() == 1 || n.intValueExact() == end.intValueExact() ) {
-            return n;
+        
+        long upper = n;
+        long lower = 1;
+        long i = 1;
+        while (i < m) {
+            upper *= (n - i);
+            lower *= (i + 1);
+            
+            while (upper %2 == 0 && lower %2 == 0) {
+                upper = upper / 2;
+                lower = lower / 2;
+            }
+            
+            while (upper %3 == 0 && lower %3 == 0) {
+                upper = upper / 3;
+                lower = lower / 3;
+            }
+            
+            while (upper %5 == 0 && lower %5 == 0) {
+                upper = upper / 5;
+                lower = lower / 5;
+            }
+            ++ i;
         }
         
-        
-        return n.multiply(factorial(n.subtract(BigInteger.valueOf(1)), end));
+        return (int)(upper / lower);   
     }
 }
