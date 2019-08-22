@@ -4,8 +4,6 @@
 // This is a answer of leet code problem 343.
 // Date: 2019.8.21
 
-import java.util.Arrays;
-
 class IntegerBreak {
     public int integerBreak(int n) {
         
