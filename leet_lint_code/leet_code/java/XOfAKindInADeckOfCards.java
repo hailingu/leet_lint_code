@@ -33,7 +33,6 @@ class XOfAKindInADeckOfCards {
          }
       }
       
-      
       return gcdNumber != 1;
     }
   
