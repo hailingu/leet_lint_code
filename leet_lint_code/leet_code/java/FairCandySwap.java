@@ -17,7 +17,6 @@ class FairCandySwap {
         }
         
         int[] ans = new int[2];
-        boolean find = false;
         for (int i : A) {
             for (int j : B) {
                 if (totalA - i + j == totalB + i - j) {
