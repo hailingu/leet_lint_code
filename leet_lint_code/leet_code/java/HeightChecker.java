@@ -4,8 +4,6 @@
 // This is a answer of leet code problem 1051.
 // Date: 2019.8.22
 
-
-
 import java.util.Arrays;
 
 class HeightChecker {
