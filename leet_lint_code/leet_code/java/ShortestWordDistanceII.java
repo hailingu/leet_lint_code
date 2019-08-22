@@ -29,8 +29,6 @@ class ShortestWordDistanceII {
     }
     
     public int shortest(String word1, String word2) {
-        int index = 0;
-        
         List<Integer> wordIdx1List = memo.get(word1);
         List<Integer> wordIdx2List = memo.get(word2);
         
