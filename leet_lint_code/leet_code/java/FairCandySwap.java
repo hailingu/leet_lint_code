@@ -25,7 +25,6 @@ class FairCandySwap {
                     return ans;
                 }
             }
-
         }
         
         return ans;
