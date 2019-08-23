@@ -8,8 +8,7 @@ import java.util.HashMap;
 
 
 class FindWordsThatCanBeFormedByCharacters {
-    public int countCharacters(String[] words, String chars) 
-    {
+    public int countCharacters(String[] words, String chars) {
         if (words.length == 0 || chars.length() == 0) return 0;
         
         char[] ch = chars.toCharArray();
