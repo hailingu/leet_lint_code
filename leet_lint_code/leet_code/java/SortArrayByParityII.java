@@ -4,7 +4,6 @@
 // This is a answer of leet code problem 922.
 // Date: 2019.8.23
 
-
 class SortArrayByParity {
     public int[] sortArrayByParityII(int[] A) {
         List<Integer> odd = new ArrayList<>();
