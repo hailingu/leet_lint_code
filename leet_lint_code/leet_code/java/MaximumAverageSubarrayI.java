@@ -1,7 +1,7 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: Hailin Gu
-// This is a answer of leet code problem 643.
+// This is a answer of leet code problem 643 .
 // Date: 2019.8.23
 
 
