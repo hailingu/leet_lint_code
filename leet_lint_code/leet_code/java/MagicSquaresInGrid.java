@@ -1,6 +1,6 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
-// Author: Hailin Gu
+// Author: leetcode
 // This is a answer of leet code problem 840.
 // Date: 2019.8.24
 
