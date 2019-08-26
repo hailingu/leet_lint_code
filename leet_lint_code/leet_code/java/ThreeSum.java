@@ -33,10 +33,10 @@ public class ThreeSum {
                     ans.add(list);
                     while (right >= 0 && nums[right - 1] == nums[right]) -- right;
                     -- right;
-                    while (left < nums.length - 1&& nums[left] == nums[left + 1]) ++ left;
+                    while (left < nums.length - 1 && nums[left] == nums[left + 1]) ++ left;
                     ++ left;
                 } else if (sum < 0){
-                    while (left < nums.length - 1&& nums[left] == nums[left + 1]) ++ left;
+                    while (left < nums.length - 1 && nums[left] == nums[left + 1]) ++ left;
                     ++ left;
 
                 } else {
