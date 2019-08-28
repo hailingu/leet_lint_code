@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 1018.
 // Date: 2019.8.23
 
+import java.util.List;
+import java.util.ArrayList;
+
 class BinaryPrefixDivisibleBy5 {
     public List<Boolean> prefixesDivBy5(int[] A) {
         List<Boolean> ans = new ArrayList<>();
