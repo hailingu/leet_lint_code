@@ -10,7 +10,7 @@ public class LonelyPixelI {
             return 0;
         }
 
-        int cnt = 0;
+        int ans = 0;
 
         for (int i = 0; i < picture.length; ++ i) {
             for (int j = 0; j < picture[0].length; ++ j) {
@@ -19,12 +19,12 @@ public class LonelyPixelI {
                     if (test) test = dfs(picture, i + 1, j, 2);
                     if (test) test = dfs(picture, i, j - 1, 3);
                     if (test) test = dfs(picture, i, j + 1, 4);
-                    if (test) ++ cnt;
+                    if (test) ++ ans;
                 }
             }
         }
 
-        return cnt;
+        return ans;
     }
 
     boolean dfs(char[][] picture, int i, int j, int direction) {
