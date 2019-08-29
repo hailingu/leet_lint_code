@@ -4,6 +4,9 @@
 // This is a answer of leet code problem 1128.
 // Date: 2019.8.13
 
+import java.util.Map;
+import java.util.HashMap;
+
 class NumberOfEquivalentDominoPairs {
     public int numEquivDominoPairs(int[][] dominoes) {
         Map<Integer, Integer> memo = new HashMap<Integer, Integer>();
