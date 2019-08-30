@@ -5,7 +5,7 @@
 // Date: 2019.8.30
 
 
-public class ConvertSortedArrayToBinarySearchTree {
+public class ConvertSortedListToBinarySearchTree {
 
     public TreeNode sortedListToBST(ListNode head) {
         if (head == null) {
