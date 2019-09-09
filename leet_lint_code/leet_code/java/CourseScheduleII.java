@@ -1,14 +1,13 @@
 // Copyright © 2018 Hailin Gu. All rights reserved.
 // License
 // Author: Hailin Gu
-// This is a answer of leet code problem 207.
+// This is a answer of leet code problem 210.
 // Date: 2019.9.9
 
 import java.util.*;
 
-public class CourseSchedule {
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
-
+public class CourseScheduleII {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
         Map<Integer, Node2> courses = new HashMap<>();
         for (int i = 0; i < numCourses; ++ i) {
             courses.put(i, new Node2(i));
@@ -30,8 +29,19 @@ public class CourseSchedule {
 
         List<Node2> sorted = new ArrayList<>();
         topologicalSort(root, sorted,courses);
+        
+        if (sorted.size() == numCourses) {
+            int[] ans = new int[sorted.size()];
+            int idx = 0;
+            for (Node2 n : sorted) {
+                ans[idx ++] = n.val;
+            }
 
-        return sorted.size() == numCourses;
+            return ans;
+        } else {
+            return new int[0];
+        }
+
     }
 
     void topologicalSort(Node2 root, List<Node2> sorted, Map<Integer, Node2> courses) {
@@ -62,7 +72,6 @@ public class CourseSchedule {
         topologicalSort(nextRoot, sorted, courses);
     }
 }
-
 
 class Node2 {
     int val;
